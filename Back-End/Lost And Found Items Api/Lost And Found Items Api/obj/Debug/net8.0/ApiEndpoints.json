@@ -1,0 +1,320 @@
+[
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "Create",
+    "RelativePath": "api/Admins/CreateNewAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "Lost_And_Found_Items_Api.Models.Admin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "Delete",
+    "RelativePath": "api/Admins/DeleteAdminById/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "Get",
+    "RelativePath": "api/Admins/GetAdminById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admins/GetAllAdmins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "Update",
+    "RelativePath": "api/Admins/UpdateAdminById/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "admin",
+        "Type": "Lost_And_Found_Items_Api.Models.Admin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
+    "Method": "Create",
+    "RelativePath": "api/Categories/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "Lost_And_Found_Items_Api.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/Categories/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/Categories/GetAllCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
+    "Method": "Get",
+    "RelativePath": "api/Categories/GetCategoryByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
+    "Method": "Update",
+    "RelativePath": "api/Categories/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "category",
+        "Type": "Lost_And_Found_Items_Api.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "Method": "Create",
+    "RelativePath": "api/Items/CreateNewItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Lost_And_Found_Items_Api.Models.ItemCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "Method": "Delete",
+    "RelativePath": "api/Items/DeleteItemByID/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/Items/GetAllItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "Method": "Get",
+    "RelativePath": "api/Items/GetItemByID/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "Method": "Update",
+    "RelativePath": "api/Items/UpdateItemByID/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ItemUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
+    "Method": "Update",
+    "RelativePath": "api/Statuses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "Lost_And_Found_Items_Api.Models.Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Update"
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
+    "Method": "Create",
+    "RelativePath": "api/Statuses/CreateNewStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "Lost_And_Found_Items_Api.Models.Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
+    "Method": "Delete",
+    "RelativePath": "api/Statuses/DeleteStudentByID{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
+    "Method": "GetAll",
+    "RelativePath": "api/Statuses/GetAllItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
+    "Method": "Get",
+    "RelativePath": "api/Statuses/GetStatusByID{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetStatusByID"
+  }
+]

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost And Found Items Api", "Lost And Found Items Api\Lost And Found Items Api.csproj", "{06BA179F-8C56-47ED-9E01-CD3AA1914B6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06BA179F-8C56-47ED-9E01-CD3AA1914B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BA179F-8C56-47ED-9E01-CD3AA1914B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BA179F-8C56-47ED-9E01-CD3AA1914B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BA179F-8C56-47ED-9E01-CD3AA1914B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8E17BBC-2F75-4B7D-BBD7-E19D88958AD6}
+	EndGlobalSection
+EndGlobal
