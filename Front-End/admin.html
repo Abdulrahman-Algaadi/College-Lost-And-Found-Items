@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Items</title>
+    <link rel="stylesheet" href="Style.Css" />
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/admin.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Lost & Found</div>
+        <div class="hamburger">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse Items</a></li>
+          <li id="logout-btn">Logout</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="item-form-section">
+      <h2>Add / Edit Item</h2>
+
+      <form id="item-form">
+        <input type="hidden" id="item-id" />
+        <input type="text" id="item-title" placeholder="Title" required />
+        <textarea id="item-description" placeholder="Description"></textarea>
+        <input type="text" id="item-photo" placeholder="Photo URL" />
+        <select id="item-category"></select>
+        <select id="item-status"></select>
+        <input type="text" id="item-location" placeholder="Location" />
+        <input type="text" id="item-contact" placeholder="Contact Info" />
+        <input type="date" id="item-date" />
+
+        <button type="submit">Save Item</button>
+      </form>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

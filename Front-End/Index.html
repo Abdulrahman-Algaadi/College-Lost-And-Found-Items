@@ -1,0 +1,76 @@
+<!-- ================== index.html ================== -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Lost & Found - Welcome</title>
+    <script type="module" src="Js/auth.js" defer></script>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <!-- Header with Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Lost & Found</div>
+        <div class="hamburger">&#9776;</div>
+        <ul class="nav-links">
+          <li class="admin-only" style="display: none">
+            <a href="admin.html">Add Item</a>
+          </li>
+          <li id="logout-btn" style="display: none"><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Landing Hero Section -->
+
+    <section class="landing-hero">
+      <h1>Welcome to the College Lost & Found System</h1>
+      <p>Find, report, and recover lost items on your campus easily.</p>
+
+      ```
+      <!-- Visitor Buttons -->
+      <div class="landing-buttons">
+        <a href="browse.html" class="btn-primary">Browse Items</a>
+        <button id="login-btn" class="btn-secondary">User/Admin Login</button>
+      </div>
+      ```
+    </section>
+
+    <!-- Scripts -->
+
+    <script type="module">
+      import { getAdmins } from "./Js/Api.js";
+
+      const loginBtn = document.getElementById("login-btn");
+      loginBtn.addEventListener("click", async () => {
+        const username = prompt("Enter username:");
+        if (!username) return alert("Username is required");
+        const password = prompt("Enter password:");
+        if (!password) return alert("Password is required");
+
+        try {
+          const admins = await getAdmins(); // Fetch all admins from API
+          const admin = admins.find(
+            (a) => a.userName === username && a.password === password
+          );
+          if (admin) {
+            alert(`Welcome, ${username}`);
+            document.querySelector(".admin-only").style.display =
+              "inline-block";
+            document.getElementById("logout-btn").style.display =
+              "inline-block";
+          } else {
+            alert("Invalid username or password");
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Login failed. Try again later.");
+        }
+      });
+    </script>
+  </body>
+</html>

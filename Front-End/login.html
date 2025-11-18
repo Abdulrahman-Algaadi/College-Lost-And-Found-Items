@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <script type="module" src="js/auth.js"></script>
+<!-- Optionally attach a login button handler in-line:
+     <script>
+       document.getElementById('login-btn').addEventListener('click', () => import('./js/auth.js').then(m=>m.loginAdmin()));
+     </script>
+-->
+
+  <link rel="stylesheet" href="Style.Css">
+</head>
+<body>
+
+<section class="login-box">
+  <h2>Admin Login</h2>
+  <input type="password" id="admin-password" placeholder="Enter admin password">
+  <button id="login-btn">Login</button>
+  <p id="login-error" style="color:red; display:none;">Incorrect Password</p>
+</section>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
