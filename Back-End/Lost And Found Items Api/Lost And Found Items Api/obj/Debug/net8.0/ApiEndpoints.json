@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
+    "Method": "Login",
+    "RelativePath": "api/Admins/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Lost_And_Found_Items_Api.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.AdminsController",
     "Method": "Update",
     "RelativePath": "api/Admins/UpdateAdminById/{id}",
     "HttpMethod": "PUT",
@@ -81,7 +97,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
     "Method": "Create",
-    "RelativePath": "api/Categories/Create",
+    "RelativePath": "api/categories/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -97,7 +113,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
     "Method": "Delete",
-    "RelativePath": "api/Categories/Delete/{id}",
+    "RelativePath": "api/categories/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -113,7 +129,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
     "Method": "GetAll",
-    "RelativePath": "api/Categories/GetAllCategories",
+    "RelativePath": "api/categories/GetAllCategories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -123,7 +139,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
     "Method": "Get",
-    "RelativePath": "api/Categories/GetCategoryByID/{id}",
+    "RelativePath": "api/categories/GetCategoryByID/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -139,7 +155,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.CategoryController",
     "Method": "Update",
-    "RelativePath": "api/Categories/Update/{id}",
+    "RelativePath": "api/categories/Update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -160,7 +176,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Create",
-    "RelativePath": "api/Items/CreateNewItem",
+    "RelativePath": "api/items/CreateNewItem",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -176,7 +192,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Delete",
-    "RelativePath": "api/Items/DeleteItemByID/{id}",
+    "RelativePath": "api/items/DeleteItemByID/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -192,7 +208,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "GetAll",
-    "RelativePath": "api/Items/GetAllItems",
+    "RelativePath": "api/items/GetAllItems",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -202,7 +218,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Get",
-    "RelativePath": "api/Items/GetItemByID/{id}",
+    "RelativePath": "api/items/GetItemByID/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -218,7 +234,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Update",
-    "RelativePath": "api/Items/UpdateItemByID/{id}",
+    "RelativePath": "api/items/UpdateItemByID/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -239,7 +255,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
     "Method": "Update",
-    "RelativePath": "api/Statuses/{id}",
+    "RelativePath": "api/statuses/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -261,7 +277,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
     "Method": "Create",
-    "RelativePath": "api/Statuses/CreateNewStatus",
+    "RelativePath": "api/statuses/CreateNewStatus",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -277,7 +293,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
     "Method": "Delete",
-    "RelativePath": "api/Statuses/DeleteStudentByID{id}",
+    "RelativePath": "api/statuses/DeleteStudentByID{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -293,7 +309,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
     "Method": "GetAll",
-    "RelativePath": "api/Statuses/GetAllItems",
+    "RelativePath": "api/statuses/GetAllStatuses",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -303,7 +319,7 @@
   {
     "ContainingType": "Lost_And_Found_Items_Api.Controllers.StatusController",
     "Method": "Get",
-    "RelativePath": "api/Statuses/GetStatusByID{id}",
+    "RelativePath": "api/statuses/GetStatusByID{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

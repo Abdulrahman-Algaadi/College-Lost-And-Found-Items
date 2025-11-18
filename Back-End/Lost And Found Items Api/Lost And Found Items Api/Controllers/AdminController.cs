@@ -16,11 +16,41 @@ namespace Lost_And_Found_Items_Api.Controllers
             _service = service;
         }
 
+        // POST: api/Admins/Login
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            if (loginDto == null ||
+                string.IsNullOrWhiteSpace(loginDto.UserName) ||
+                string.IsNullOrWhiteSpace(loginDto.Password))
+            {
+                return BadRequest(new { message = "Username and password are required." });
+            }
+
+            // Use your existing service method
+            var admin = await _service.VerifyLoginAsync(loginDto.UserName, loginDto.Password);
+
+            if (admin == null)
+            {
+                return Unauthorized(new { message = "Invalid username or password." });
+            }
+
+            // Login successful
+            return Ok(new
+            {
+                message = "Login successful",
+                adminId = admin.Id,
+                userName = admin.Username,
+                isAdmin = true
+            });
+        }
+
         // GET: api/Admins
         [HttpGet("GetAllAdmins")]
         public async Task<IActionResult> GetAll()
         {
             var admins = await _service.GetAllAsync();
+            
             return Ok(admins);
         }
 

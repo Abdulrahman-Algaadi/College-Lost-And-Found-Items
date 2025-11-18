@@ -5,14 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lost_And_Found_Items_Api.Controllers
 {
-    [Route("api/Statuses")]
+    [Route("api/statuses")]
     [ApiController]
     public class StatusController : ControllerBase
     {
         private readonly StatusService _service;
         public StatusController(StatusService service) => _service = service;
 
-        [HttpGet("GetAllItems")] public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
+        [HttpGet("GetAllStatuses")] public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
         [HttpGet("GetStatusByID{id}", Name = "GetStatusByID")] public async Task<IActionResult> Get(int id) => Ok(await _service.GetByIdAsync(id));
         [HttpPost("CreateNewStatus")] public async Task<IActionResult> Create(Status status) => Ok(await _service.AddAsync(status));
         [HttpPut("{id}",Name ="Update")]

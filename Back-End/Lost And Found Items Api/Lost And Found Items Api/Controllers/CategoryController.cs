@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lost_And_Found_Items_Api.Controllers
 {
-    [Route("api/Categories")]
+    [Route("api/categories")]
     [ApiController]
     public class CategoryController : ControllerBase
     {

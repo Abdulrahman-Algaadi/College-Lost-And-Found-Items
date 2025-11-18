@@ -5,6 +5,37 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Admins/Login": {
+      "post": {
+        "tags": [
+          "Admins"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Admins/GetAllAdmins": {
       "get": {
         "tags": [
@@ -136,7 +167,7 @@
         }
       }
     },
-    "/api/Categories/GetAllCategories": {
+    "/api/categories/GetAllCategories": {
       "get": {
         "tags": [
           "Category"
@@ -148,7 +179,7 @@
         }
       }
     },
-    "/api/Categories/GetCategoryByID/{id}": {
+    "/api/categories/GetCategoryByID/{id}": {
       "get": {
         "tags": [
           "Category"
@@ -171,7 +202,7 @@
         }
       }
     },
-    "/api/Categories/Create": {
+    "/api/categories/Create": {
       "post": {
         "tags": [
           "Category"
@@ -202,7 +233,7 @@
         }
       }
     },
-    "/api/Categories/Update/{id}": {
+    "/api/categories/Update/{id}": {
       "put": {
         "tags": [
           "Category"
@@ -244,7 +275,7 @@
         }
       }
     },
-    "/api/Categories/Delete/{id}": {
+    "/api/categories/Delete/{id}": {
       "delete": {
         "tags": [
           "Category"
@@ -267,7 +298,7 @@
         }
       }
     },
-    "/api/Items/GetAllItems": {
+    "/api/items/GetAllItems": {
       "get": {
         "tags": [
           "Items"
@@ -279,7 +310,7 @@
         }
       }
     },
-    "/api/Items/GetItemByID/{id}": {
+    "/api/items/GetItemByID/{id}": {
       "get": {
         "tags": [
           "Items"
@@ -302,7 +333,7 @@
         }
       }
     },
-    "/api/Items/CreateNewItem": {
+    "/api/items/CreateNewItem": {
       "post": {
         "tags": [
           "Items"
@@ -333,7 +364,7 @@
         }
       }
     },
-    "/api/Items/UpdateItemByID/{id}": {
+    "/api/items/UpdateItemByID/{id}": {
       "put": {
         "tags": [
           "Items"
@@ -375,7 +406,7 @@
         }
       }
     },
-    "/api/Items/DeleteItemByID/{id}": {
+    "/api/items/DeleteItemByID/{id}": {
       "delete": {
         "tags": [
           "Items"
@@ -398,7 +429,7 @@
         }
       }
     },
-    "/api/Statuses/GetAllItems": {
+    "/api/statuses/GetAllStatuses": {
       "get": {
         "tags": [
           "Status"
@@ -410,7 +441,7 @@
         }
       }
     },
-    "/api/Statuses/GetStatusByID{id}": {
+    "/api/statuses/GetStatusByID{id}": {
       "get": {
         "tags": [
           "Status"
@@ -434,7 +465,7 @@
         }
       }
     },
-    "/api/Statuses/CreateNewStatus": {
+    "/api/statuses/CreateNewStatus": {
       "post": {
         "tags": [
           "Status"
@@ -465,7 +496,7 @@
         }
       }
     },
-    "/api/Statuses/{id}": {
+    "/api/statuses/{id}": {
       "put": {
         "tags": [
           "Status"
@@ -508,7 +539,7 @@
         }
       }
     },
-    "/api/Statuses/DeleteStudentByID{id}": {
+    "/api/statuses/DeleteStudentByID{id}": {
       "delete": {
         "tags": [
           "Status"
@@ -677,6 +708,20 @@
             "nullable": true
           },
           "userId": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
             "nullable": true
           }
         },
