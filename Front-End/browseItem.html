@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Items</title>
+    <link rel="stylesheet" href="Css/Style.css">
+</head>
+<body onload="renderNavbar(); loadItems()">
+    <div id="navbar"></div>
+    <div style="max-width:800px; margin:20px auto;">
+        <h2>Browse Items</h2>
+        <ul id="itemsList"></ul>
+    </div>
+
+    <script src="Js/Api/api.js"></script>
+    <script src="Js/Main.js"></script>
+    <script>
+        async function loadItems() {
+            const list = document.getElementById("itemsList");
+            list.innerHTML = "Loading...";
+            try {
+                const items = await ItemsAPI.getAll();
+                list.innerHTML = "";
+                items.forEach(item => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<strong>${item.title}</strong> - ${item.description} 
+                        ${isAdmin() ? `<button onclick="deleteItem(${item.id})">Delete</button>` : ''}`;
+                    list.appendChild(li);
+                });
+            } catch(err) {
+                list.innerHTML = "Failed to load items.";
+            }
+        }
+
+        async function deleteItem(id) {
+            if(!confirm("Delete this item?")) return;
+            await ItemsAPI.delete(id);
+            loadItems();
+        }
+    </script>
+</body>
+</html>

@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Items</title>
-    <link rel="stylesheet" href="Style.Css" />
-    <script type="module" src="js/auth.js"></script>
-    <script type="module" src="js/admin.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">Lost & Found</div>
-        <div class="hamburger">&#9776;</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="browse.html">Browse Items</a></li>
-          <li id="logout-btn">Logout</li>
-        </ul>
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="Css/Style.css">
+</head>
+<body onload="renderNavbar(); loadItems()">
+    <div id="navbar"></div>
+    <div style="max-width:800px; margin:20px auto;">
+        <h2>Admin Dashboard</h2>
+        <button onclick="showAddForm()">Add New Item</button>
+        <div id="addForm" style="display:none; margin-top:20px;">
+            <h3>Add Item</h3>
+            <input type="text" id="newTitle" placeholder="Title"><br>
+            <input type="text" id="newDesc" placeholder="Description"><br>
+            <input type="text" id="newPhoto" placeholder="Photo URL"><br>
+            <button onclick="addItem()">Add Item</button>
+        </div>
+        <ul id="itemsList"></ul>
+    </div>
 
-    <section class="item-form-section">
-      <h2>Add / Edit Item</h2>
+    <script src="Js/Api/api.js"></script>
+    <script src="Js/Main.js"></script>
+    <script>
+        function showAddForm() {
+            document.getElementById("addForm").style.display = "block";
+        }
 
-      <form id="item-form">
-        <input type="hidden" id="item-id" />
-        <input type="text" id="item-title" placeholder="Title" required />
-        <textarea id="item-description" placeholder="Description"></textarea>
-        <input type="text" id="item-photo" placeholder="Photo URL" />
-        <select id="item-category"></select>
-        <select id="item-status"></select>
-        <input type="text" id="item-location" placeholder="Location" />
-        <input type="text" id="item-contact" placeholder="Contact Info" />
-        <input type="date" id="item-date" />
+        async function addItem() {
+            const title = document.getElementById("newTitle").value;
+            const desc = document.getElementById("newDesc").value;
+            const photo = document.getElementById("newPhoto").value;
 
-        <button type="submit">Save Item</button>
-      </form>
-    </section>
+            const dto = { title, description: desc, photoUrl: photo, categoryId:1, statusId:1, location:'', contactInfo:'', dateReported: new Date() };
+            await ItemsAPI.create(dto);
+            alert("Item added!");
+            loadItems();
+        }
 
-    <script src="js/auth.js"></script>
-    <script src="js/admin.js"></script>
-  </body>
+        async function loadItems() {
+            const list = document.getElementById("itemsList");
+            list.innerHTML = "Loading...";
+            const items = await ItemsAPI.getAll();
+            list.innerHTML = "";
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${item.title}</strong> - ${item.description} 
+                    <button onclick="deleteItem(${item.id})">Delete</button>`;
+                list.appendChild(li);
+            });
+        }
+
+        async function deleteItem(id) {
+            if(!confirm("Delete this item?")) return;
+            await ItemsAPI.delete(id);
+            loadItems();
+        }
+
+        if(!isAdmin()){
+            alert("Access denied. Please login as admin.");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
 </html>
