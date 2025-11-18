@@ -1,6 +1,4 @@
-
-
-import { getItems, deleteItem } from "./api.js";
+import { getItems, deleteItem } from "./Api.js";
 
 const itemsGrid = document.getElementById("items-grid");
 

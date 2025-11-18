@@ -270,7 +270,7 @@
     "/api/Items/GetAllItems": {
       "get": {
         "tags": [
-          "Item"
+          "Items"
         ],
         "responses": {
           "200": {
@@ -282,7 +282,7 @@
     "/api/Items/GetItemByID/{id}": {
       "get": {
         "tags": [
-          "Item"
+          "Items"
         ],
         "parameters": [
           {
@@ -305,7 +305,7 @@
     "/api/Items/CreateNewItem": {
       "post": {
         "tags": [
-          "Item"
+          "Items"
         ],
         "requestBody": {
           "content": {
@@ -336,7 +336,7 @@
     "/api/Items/UpdateItemByID/{id}": {
       "put": {
         "tags": [
-          "Item"
+          "Items"
         ],
         "parameters": [
           {
@@ -378,7 +378,7 @@
     "/api/Items/DeleteItemByID/{id}": {
       "delete": {
         "tags": [
-          "Item"
+          "Items"
         ],
         "parameters": [
           {

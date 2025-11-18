@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GRlcuMsJtLk=",
+  "dgSpecHash": "rA8ah0hrYf4=",
   "success": true,
-  "projectFilePath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
+  "projectFilePath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Back-End\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

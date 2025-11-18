@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lost_And_Found_Items_Api.Controllers
 {
-    [Route("api/Items")]
+    [Route("api/items")]
     [ApiController]
-    public class ItemController : ControllerBase
+    public class ItemsController : ControllerBase
     {
         private readonly ItemService _service;
-        public ItemController(ItemService service) => _service = service;
+        public ItemsController(ItemService service) => _service = service;
 
         // GET: api/Items/GetAllItems
         [HttpGet("GetAllItems")]

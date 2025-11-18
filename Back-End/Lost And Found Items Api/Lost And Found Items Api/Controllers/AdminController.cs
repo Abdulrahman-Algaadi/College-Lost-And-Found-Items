@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lost_And_Found_Items_Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Admins")]
     [ApiController]
     public class AdminsController : ControllerBase
     {

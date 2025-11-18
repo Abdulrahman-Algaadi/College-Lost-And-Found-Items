@@ -158,7 +158,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Create",
     "RelativePath": "api/Items/CreateNewItem",
     "HttpMethod": "POST",
@@ -174,7 +174,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Delete",
     "RelativePath": "api/Items/DeleteItemByID/{id}",
     "HttpMethod": "DELETE",
@@ -190,7 +190,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "GetAll",
     "RelativePath": "api/Items/GetAllItems",
     "HttpMethod": "GET",
@@ -200,7 +200,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Get",
     "RelativePath": "api/Items/GetItemByID/{id}",
     "HttpMethod": "GET",
@@ -216,7 +216,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemController",
+    "ContainingType": "Lost_And_Found_Items_Api.Controllers.ItemsController",
     "Method": "Update",
     "RelativePath": "api/Items/UpdateItemByID/{id}",
     "HttpMethod": "PUT",

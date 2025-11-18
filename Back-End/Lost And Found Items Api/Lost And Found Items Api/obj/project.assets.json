@@ -5175,11 +5175,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
+      "projectUniqueName": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Back-End\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
       "projectName": "Lost And Found Items Api",
-      "projectPath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
+      "projectPath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Back-End\\Lost And Found Items Api\\Lost And Found Items Api\\Lost And Found Items Api.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Lost And Found Items Api\\Lost And Found Items Api\\obj\\",
+      "outputPath": "D:\\Dr.Mohammed Abu Hadhoud\\Lost And Found Items APi\\Back-End\\Lost And Found Items Api\\Lost And Found Items Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
